@@ -1,55 +1,15 @@
-# Changelog
 
-### [1.7.10-11]
+# Details about the new features on the fork from p4535992
 
-- Add `One click note creation` feature, you can enable this with a module settings.
+This table is a summary of the fixes and features that have been added from the latest official release of Death Save 1.5.0 to the 1.7.0 version p4535992 has managed.
 
-### [1.7.9]
+The fork was born on the 2021-08-20 from a request made to me by an acquaintance to fix some bugs on version 9, but afterwards the word spread and I started to put new features that were requested of me with consequent new use cases and bug fixes.
 
-- Bug fix "Is Pin transparent ?"
+The fork has been tested by several people for almost a year, so I'm confident it's as stable as any module can be.
 
-### [1.7.8]
+Apart from the new features, the real big difference is the use of the [jquery-powertip](https://github.com/stevenbenner/jquery-powertip) javascript project, to manage the preview. It also works quite well on mobile and automatically calculates the size of the preview based on the size of the window, so it has many strengths, it does not use the standard foundryvtt library for rendering templates, but after many tests I decided that the solution based on the jQuery library it was much more dynamic at least for foundryvtt version 9.
 
-- NEW Feature "Show only to GM ?" : Quite simply regardless of the associated permissions it shows the note only to the gm, it is very useful when used with this other module to prepare notes for the GM or random encounter with the Ironmonk modules https://foundryvtt.com/packages/journal-icon-numbers, personally it saves me a lot of time in not continuously setting the permissions on the associated journal.
-- NEW Feature "Is Pin transparent ?" : Now with a simple checkbox on the note configuration it is possible to make the icon transparent without wasting time looking for the transparent image file. Very useful for people who use maps with icons printed on the map and just want to show the tooltip when the cursor is over that image and it saves me a lot of time. NOTE: This configuration is applied only to the icon image of the note , not the image tooltip.
-- Some clean up in preparation for fvtt v10
-
-### [1.7.7]
-
-- Bug fix [Show Player Labaer name instead Journal entry name](https://github.com/p4535992/foundryvtt-pin-cushion/issues/21)
-
-### [1.7.6]
-
-- Bug fix [[BUG] ressing ALT does not reveal all notes labels anymore](https://github.com/p4535992/foundryvtt-pin-cushion/issues/22)
-- Bug fix [Show Player Labaer name instead Journal entry name](https://github.com/p4535992/foundryvtt-pin-cushion/issues/21)
-
-### [1.7.5]
-
-- Bug fix [[BUG] Default Journal Entry Permission not respected](https://github.com/p4535992/foundryvtt-pin-cushion/issues/20)
-
-### [1.7.4]
-
-- Bug fix [[BUG] Default Journal Entry Permission not respected](https://github.com/p4535992/foundryvtt-pin-cushion/issues/20)
-- Bug fix [[BUG] Default Journal Entry Folder not respected](https://github.com/p4535992/foundryvtt-pin-cushion/issues/19)
-
-### [1.7.3]
-
-- Bug fix [[BUG] Default Journal Entry Permission not respected](https://github.com/p4535992/foundryvtt-pin-cushion/issues/20)
-- Bug fix [Always (when hover) show name of pin up (above) to others pin](https://github.com/p4535992/foundryvtt-pin-cushion/issues/16)
-- Bug fix [[BUG] Default Journal Entry Folder not respected](https://github.com/p4535992/foundryvtt-pin-cushion/issues/19)
-- Bug fix [[BUG] Hovering over map pins too quickly with too low a delay breaks the hover feature](https://github.com/p4535992/foundryvtt-pin-cushion/issues/18) the minimum delay is now 100ms on the module settings
-
-### [1.7.2]
-
-- Buf fix [Pin Cushion 1.7 broke "Do not show Journal Preview"](https://github.com/p4535992/foundryvtt-pin-cushion/issues/15)
-
-### [1.7.1] 
-
-- Add again 'enableBackgroundlessPins' has module setitngs for anyone found useful.
-
-### [1.7.0] [New Maintainer structure]
-
-- New structure based on the best practices (everything go under a src folder)
+**NOTE:** If you are interested in the chronological order you can check the releases in the github project.
 
 ### [1.6.12]
 
@@ -209,81 +169,3 @@
 - Add updated version of the module [foundryvtt-journal-thumbnail](https://github.com/J-Guenther/foundryvtt-journal-thumbnail) integrated for avoid conflict (and because the module is not touched for 10 months)
 - Add module setting created notes for player-only icons enabled based on this pull request [Player journal icons](https://github.com/death-save/pin-cushion/pull/65).
 
-
-### [1.5.0] - 2021-06-05
-- Added compatibility for [Foundry VTT v0.8.6](https://foundryvtt.com/releases/0.8.6) -- thanks @ethaks once again! 🎉
-> Due to the massive changes in Foundry v0.8.x the way that Pin Cushion creates Player (Scene) Notes has changed. You now need to set the core permission `Create Map Notes` and the permission `Create Journal Entries`. If the `Create Journal Entries` permission is not set to allow Players to create Journal Entries, then players will receive a message when they try to create a Map Note using double-click. If the `Create Map Notes` permission is not set to allow Players to create Map Notes then no warning will be raised.
-
-### [1.4.0] - 2021-04-18
-- You can now set the default permission and folder when creating a Journal Note using Pin Cushion (thanks @saif-ellafi!)
-- Images are no longer stretched in the Journal preview (thanks @krysztalzg!)
-- Updated 日本語 (Japanese) translation (thanks again @brothersharper and `touge`!)
-- Updated Español (Spanish) translation (thanks gain @lozalojo!)
-
-### [1.3.0] - 2021-03-27
-- Added a setting to automatically create folders per-user to store Journal Entries that are related to Notes (thanks @ethaks!)
-- Added a setting for the default permission to apply to newly created Player Notes (eg. `Observer`, `Limited` etc) (thanks @ethaks!)
-- 居酒屋はここにあります -- 日本語 (Japanese) translation added (thanks @brothersharper and `touge`!)
-
-### [1.2.0] - 2021-03-18
-- Players can now create Notes on the scene/map! (🎉 thanks @ethaks for this awesome new feature! 🙌)
-- - Note: in order to allow Players to create Notes they must have the `Create Journal Entry` permission in the core Foundry permissions. You'll also need to enable `Allow Player Notes` in module settings!
-- *¡Aquí hay dragones!* Pin Cushion is now available *en Español* thanks to @lozalojo! 🎊
-- When you delete a Note, the Pin Cushion preview is now cleared 🐛
-- Fixed a bug that prevented Module settings from registering 🐛
-- Added support for [🐛 Bug Reporter](https://github.com/League-of-Foundry-Developers/bug-reporter)
-
-### [1.1.4] - 2020-11-03
-### Added
-- Confirmed compatibility with Foundry VTT 0.7.5
-- About App (accessible from Module Settings)
-
-### [1.1.3] - 2020-10-06
-### Added
-- Português (Brasil) translation -- thanks @rinnocenti!
-
-### Changed
-- Journal Preview text is now left-aligned
-- Confirmed compatibility with Foundry VTT 0.7.3
-
-### [1.1.2] - 2020-05-31
-### Changed
-- Journal Preview settings can now be set by each user
-- Confirmed compatibility with Foundry VTT 0.6.1
-
-### [1.1.1] - 2020-05-31
-### Changed
-- Journal Preview is now disabled by default and has the following settings:
-- - Enable
-- - Preview Type (HTML or Text Snippet)
-- - Max Preview Length (Text Snippet only)
-- - Preview Delay
-
-### Fixed
-- Journal Previews no longer show secrets to players
-
-### [1.1] - 2020-05-29
-### Added
-- Journal Preview on Map Pin hover (enable in Module Settings)
-
-### Changed
-- Refactored some methods to use more native Foundry functionality
-
-### Fixed
-- Double-click to create map pin works again
-
-### [1.0.1] - 2020-04-29
-### Changed
-- Updated for compatibility with Foundry VTT 0.5.5
-- Light refactoring of some code
-
-### [1.0.0] - 2020-03-08
-### Added
-- Double-click canvas on Notes Layer to create a Journal Entry and Map Pin
-
-### Changed
-- Refactored into a class and cleaned up code
-
-### [0.1.0] - 2020-03-07
-### Added
-- First release. Added the ability to use a filepicker in the Map Pin form to select any file in the user's data.
